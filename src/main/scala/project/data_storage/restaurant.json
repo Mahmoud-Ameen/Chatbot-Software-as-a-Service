@@ -1,0 +1,142 @@
+{
+  "greeting": {
+    "patterns": [
+      "Hi",
+      "Hello",
+      "Hey there",
+      "Good morning",
+      "Good afternoon",
+      "How are you?",
+      "Is anyone there?",
+      "What's up?",
+      "Greetings"
+    ],
+    "responses": [
+      "Hello!",
+      "Good to see you!",
+      "Hi there, how can I help?",
+      "Hey! How can I assist you today?",
+      "Good day!"
+    ]
+  },
+  "farewell": {
+    "patterns": [
+      "Goodbye",
+      "See you later",
+      "Take care",
+      "Until next time",
+      "Bye for now",
+      "Have a great day",
+      "Have a nice day",
+      "So long"
+    ],
+    "responses": [
+      "Goodbye!",
+      "Take care!",
+      "See you soon!",
+      "Have a great day ahead!",
+      "Farewell!",
+      "Until we meet again!"
+    ]
+  },
+  "thanks": {
+    "patterns": [
+      "Thank you",
+      "Thanks",
+      "Appreciate it",
+      "Thanks a lot",
+      "Thank you very much",
+      "Thanks for your help"
+    ],
+    "responses": [
+      "You're welcome!",
+      "Happy to help!",
+      "Glad I could assist!",
+      "No problem!",
+      "Anytime!",
+      "It was my pleasure!"
+    ]
+  },
+  "help": {
+    "patterns": [
+      "Help",
+      "Can you assist me?",
+      "I need some help",
+      "Help me please",
+      "I'm stuck",
+      "Need assistance"
+    ],
+    "responses": [
+      "Sure, what do you need help with?",
+      "Of course! How can I assist you?",
+      "I'm here to help. What's the issue?",
+      "I'll do my best to assist you. What's the problem?",
+      "Sure thing. What's the matter?",
+      "Let me know what you need help with."
+    ]
+  },
+  "menu_inquiry": {
+    "patterns": [
+      "What's on the menu?",
+      "Do you have a menu?",
+      "Can I see the menu?",
+      "What dishes do you offer?",
+      "Are there any specials today?"
+    ],
+    "responses": [
+      "Certainly! Here's our menu: [Link to Menu].",
+      "You can view our menu online: [Link to Menu].",
+      "Our menu features a variety of dishes including [Examples].",
+      "We have daily specials. Would you like to hear about them?",
+      "Our menu includes options for [Dietary Restrictions]."
+    ]
+  },
+  "reservation": {
+    "patterns": [
+      "Can I make a reservation?",
+      "Do you take reservations?",
+      "I'd like to book a table",
+      "Is it possible to reserve a spot?",
+      "Can I secure a table for tonight?"
+    ],
+    "responses": [
+      "Certainly! How many people will be dining?",
+      "Yes, we accept reservations. How many in your party?",
+      "Of course. What date and time would you like to reserve?",
+      "We'd be happy to book a table for you. What time works best?",
+      "Yes, reservations are available. When would you like to dine?"
+    ]
+  },
+  "opening_hours": {
+    "patterns": [
+      "What are your opening hours?",
+      "When do you open?",
+      "What time do you close?",
+      "Are you open today?",
+      "What are your business hours?"
+    ],
+    "responses": [
+      "We're open from [Opening Time] to [Closing Time] every day.",
+      "Our opening hours are [Opening Time] to [Closing Time] on weekdays.",
+      "We close at [Closing Time] today. Feel free to visit us before then!",
+      "Yes, we're open today. Our hours are [Opening Time] to [Closing Time].",
+      "Our business hours are from [Opening Time] to [Closing Time] daily."
+    ]
+  },
+  "delivery_services": {
+    "patterns": [
+      "Do you offer delivery?",
+      "Can you deliver food?",
+      "Is delivery available?",
+      "Do you provide takeout?",
+      "Can I order food for delivery?"
+    ],
+    "responses": [
+      "Yes, we offer delivery services. Where would you like the food delivered?",
+      "Delivery is available. What's your delivery address?",
+      "We provide takeout and delivery. What would you like to order?",
+      "You can order food for delivery. What items would you like?",
+      "Delivery service is available within [Delivery Area]."
+    ]
+  }
+}

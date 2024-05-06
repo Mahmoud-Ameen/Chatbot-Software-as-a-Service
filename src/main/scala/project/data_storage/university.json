@@ -1,0 +1,123 @@
+{
+  "greeting": {
+    "patterns": [
+      "Hi",
+      "Hello",
+      "Hey there",
+      "Good morning",
+      "Good afternoon",
+      "How are you?",
+      "Is anyone there?",
+      "What's up?",
+      "Greetings"
+    ],
+    "responses": [
+      "Hello, {name}"
+    ]
+  },
+  "farewell": {
+    "patterns": [
+      "Goodbye",
+      "See you later",
+      "Take care",
+      "Until next time",
+      "Bye for now",
+      "Have a great day",
+      "Have a nice day",
+      "So long"
+    ],
+    "responses": [
+      "Goodbye!",
+      "Take care!",
+      "See you soon!",
+      "Have a great day ahead!",
+      "Farewell!",
+      "Until we meet again!"
+    ]
+  },
+  "thanks": {
+    "patterns": [
+      "Thank you",
+      "Thanks",
+      "Appreciate it",
+      "Thanks a lot",
+      "Thank you very much",
+      "Thanks for your help"
+    ],
+    "responses": [
+      "You're welcome!",
+      "Happy to help!",
+      "Glad I could assist!",
+      "No problem!",
+      "Anytime!",
+      "It was my pleasure!"
+    ]
+  },
+  "help": {
+    "patterns": [
+      "Help",
+      "Can you assist me?",
+      "I need some help",
+      "Help me please",
+      "I'm stuck",
+      "Need assistance"
+    ],
+    "responses": [
+      "Sure, what do you need help with?",
+      "Of course! How can I assist you?",
+      "I'm here to help. What's the issue?",
+      "I'll do my best to assist you. What's the problem?",
+      "Sure thing. What's the matter?",
+      "Let me know what you need help with."
+    ]
+  },
+  "Admissions": {
+    "patterns": [
+      "How do I apply to the university?",
+      "What are the admission requirements?",
+      "When is the application deadline?"
+    ],
+    "responses": ["To apply to the university, you can visit our official admissions website and follow the application instructions. Admission requirements typically include submitting transcripts, standardized test scores, recommendation letters, and a personal statement. Application deadlines vary depending on the program and term, so please refer to the admissions website for specific dates."
+  ]},
+  "Courses": {
+    "patterns": [
+      "What courses does the university offer?",
+      "How do I register for courses?",
+      "Can I change my course schedule?"
+    ],
+    "responses": ["The university offers a wide range of courses across various disciplines, including arts, sciences, engineering, business, and more. To register for courses, you can use the university's online registration system. Course schedules can typically be changed during the designated add/drop period at the beginning of each semester. Be sure to consult with your academic advisor for guidance on course selection and scheduling."
+  ]},
+  "Campus Facilities": {
+    "patterns": [
+      "What facilities are available on campus?",
+      "Where can I find the library?",
+      "Are there on-campus dining options?"
+    ],
+    "responses": ["The university campus offers a variety of facilities to support student life and learning, including libraries, laboratories, recreational centers, dining halls, student lounges, and more. The main library is located at [insert library location]. On-campus dining options include cafeterias, food courts, coffee shops, and specialty restaurants. You can explore campus facilities further by visiting the university's website or taking a campus tour."
+ ]
+  },
+  "Financial Aid": {
+    "patterns": [
+      "How do I apply for financial aid?",
+      "What types of financial aid are available?",
+      "When will I receive my financial aid award?"
+    ],
+    "responses":[ "To apply for financial aid, you must complete the Free Application for Federal Student Aid (FAFSA) form. Financial aid options may include scholarships, grants, loans, and work-study programs. The timing of financial aid disbursement varies, but awards are typically processed before the start of each semester. You can check your financial aid status and award details through the university's student portal."
+  ]},
+  "Housing": {
+    "patterns": [
+      "How do I apply for on-campus housing?",
+      "What types of housing options are available?",
+      "Can I request a roommate?"
+    ],
+    "responses":[ "To apply for on-campus housing, you must submit a housing application through the university's housing portal. Housing options may include traditional dormitories, apartment-style living, and themed housing communities. You can usually request a roommate when completing your housing application, and the university will do its best to accommodate your preferences."
+  ]},
+  "Student Life": {
+    "patterns": [
+      "What extracurricular activities are available?",
+      "How can I get involved in student organizations?",
+      "Are there any campus events or traditions?"
+    ],
+    "responses":[ "The university offers a vibrant student life with a wide range of extracurricular activities, including clubs, organizations, sports teams, volunteer opportunities, and cultural events. You can explore and join student organizations through the university's student activities office or online platform. Additionally, the campus hosts various events and traditions throughout the academic year, such as welcome week, homecoming, and cultural festivals, providing ample opportunities for social engagement and community building."
+ ] }
+}
