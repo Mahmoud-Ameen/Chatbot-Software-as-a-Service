@@ -4,10 +4,10 @@ import project.Application.Chatbot
 
 import java.io.*
 import java.net.*
-import java.util.HashMap as JHashMap
+import org.json4s.JsonDSL.*
+import org.json4s.native.JsonMethods.*
+import project.data_storage.DataManager
 
-import org.json4s.JsonDSL._
-import org.json4s.native.JsonMethods._
 import java.util.HashMap as JHashMap
 
 object ChatbotWebServer {
@@ -35,6 +35,7 @@ object ChatbotWebServer {
       val response = endpoint match {
         case "/start" => startSession(queryParams)
         case "/chat" => chat(queryParams)
+        case "/getClients" => getClients()
         case _ => generateNotFoundResponse()
       }
 
@@ -83,6 +84,12 @@ object ChatbotWebServer {
 
   private def generateNotFoundResponse(): String = {
     val responseJson = ("status" -> "404 Not Found") ~ ("message" -> "Endpoint not found")
+
+    compact(render(responseJson))
+  }
+
+  private def getClients():String = {
+    val responseJson = ("status" -> "200 OK") ~ ("response" -> DataManager().getClientIds())
 
     compact(render(responseJson))
   }
