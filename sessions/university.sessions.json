@@ -1,0 +1,428 @@
+[
+  {
+    "sessionId":"1715110916652-3fbe2eeca2194658ae6d6c7e55df224c",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud",
+      "age":"17"
+    },
+    "incompleteResponse":"{name}'s age is {age}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715111847432-17e33dfdf02a4d83b28a89e2c779fbd1",
+    "clientId":"university",
+    "attributes":{
+      "name":"3bdo",
+      "age":"what+is+my+age"
+    },
+    "incompleteResponse":"{name}'s age is {age}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715113895791-6c58ab08a6f5402aa96f68d615daa89e",
+    "clientId":"university",
+    "attributes":{
+      "age":"17",
+      "name":"kamamo"
+    },
+    "incompleteResponse":"{name}'s age is {age}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715128922682-ddde0e7a52ca418084621427dcdf3c0c",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715128961913-8e308052dac246e890db220372e70016",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715129049029-68079cd67dcc4702b2b118d168dc4a04",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715129243085-67bb08f82a7849dc92e16cae991ec6a4",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715129386352-509256ad4f544ee6a2012323189ce887",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud",
+      "age":"17"
+    },
+    "incompleteResponse":"{name}'s age is {age}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715129448796-bc4aa00bd06a4b42af8e31ea29f4d940",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715132478380-c673b845652449e9917e7a4e560bbe45",
+    "clientId":"university",
+    "attributes":{
+      "name":"sabagh",
+      "age":"17"
+    },
+    "incompleteResponse":"{name}'s age is {age}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135345640-09c026645ede490da7b40904f189ad55",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135460413-c6ed47501f2f461aa2553319ad65a1a5",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135472447-25ef245ca03f41a5a574e38d5d41bbab",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135671329-fa9bdb88e7c5465c999408d524393c24",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "incompleteResponse":"Hello, {name}",
+    "promptedAttribute":"name",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135712968-4938869276b24597abe9fdb3076ed2f7",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud%20ashraf"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135728249-d9e66e7954bc4b8e89b8c807d5d6196e",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135793266-63ac2fe406394e2d8e263107b88fb7c4",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135820004-708d90431b4c44d2b3a4d1b2738b81e5",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715136281819-78f740d566174224b3f0187fa0c4fecb",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715136632385-6fecd73f8c7f4dc380996057a75baaf5",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715138002441-52ad19923a674889bfd2f4d5caebc4ed",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715138038500-e0eb3aed49244cfea0862de3701f17c8",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715138060739-0bd202bfaf2e4d2ab555b49c6ce04312",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715138326760-739d50d29c7c41c7822359ddbc393684",
+    "clientId":"university",
+    "attributes":{
+      
+    },
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715138481764-cfe88a187a114fc18f34c1c41576b0f8",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715139008758-87702d9104394b94bd3b45b0f19df3ed",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715139103583-fa43a098d9f448f79dd2ff78ce6cb81e",
+    "clientId":"university",
+    "attributes":{
+      "name":"samo"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715139262767-f9b2192d813048c194a7e19f14651032",
+    "clientId":"university",
+    "attributes":{
+      "name":"samo"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715135906105-7cd7be2c707e455d9041c6af3fa83428",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hello, {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715139987739-a3ddab7ba21c4b9988e07c65098233ca",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Good day! {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715140213079-6ba1fecb45d8484c8b3294829e0de230",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hi {name}, how can I help? ",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715140287611-5a40d5edaa6c4a848240f1ab4a685cbd",
+    "clientId":"university",
+    "attributes":{
+      "name":"samo"
+    },
+    "incompleteResponse":"Good to see you! {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715140637200-052221013a66406d8764e58b9bb47012",
+    "clientId":"university",
+    "attributes":{
+      "name":"mah"
+    },
+    "incompleteResponse":"Good to see you! {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715141068169-50cbab2d00d74399bdd5a6b4fe28413e",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Good to see you! {name}",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715141272651-4a739bca635c41b9bdd6edfcd3955891",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hey {name}! How can I assist you today?",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715141459133-4784aae1be9644d58446ae2ca4b6adef",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hi {name}, how can I help? ",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715142049137-5ace366aab6e4a92ba0564b1a2bb3aa2",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hi {name}, how can I help? ",
+    "messages":[
+      
+    ]
+  },
+  {
+    "sessionId":"1715142251957-196ad42d3dcb4d928ff3ad0cc827bbf8",
+    "clientId":"university",
+    "attributes":{
+      "name":"mahmoud"
+    },
+    "incompleteResponse":"Hi {name}, how can I help? ",
+    "messages":[
+      
+    ]
+  }
+]

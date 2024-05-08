@@ -12,7 +12,11 @@
       "Greetings"
     ],
     "responses": [
-      "Hello, {name}"
+      "Hello, {name}",
+      "Good to see you! {name}",
+      "Hi {name}, how can I help? ",
+      "Hey {name}! How can I assist you today?",
+      "Good day! {name}"
     ]
   },
   "farewell": {
@@ -27,12 +31,12 @@
       "So long"
     ],
     "responses": [
-      "Goodbye!",
-      "Take care!",
-      "See you soon!",
-      "Have a great day ahead!",
-      "Farewell!",
-      "Until we meet again!"
+      "Goodbye! {name}",
+      "Take care! {name}",
+      "See you soon! {name}",
+      "Have a great day ahead! {name}",
+      "Farewell! {name}",
+      "Until we meet again! {name}"
     ]
   },
   "thanks": {
@@ -82,6 +86,8 @@
   "Courses": {
     "patterns": [
       "What courses does the university offer?",
+      "What courses does you offer",
+      "What courses does you have",
       "How do I register for courses?",
       "Can I change my course schedule?"
     ],
@@ -90,8 +96,9 @@
   "Campus Facilities": {
     "patterns": [
       "What facilities are available on campus?",
-      "Where can I find the library?",
-      "Are there on-campus dining options?"
+      "What facilities does the university have ?",
+      "Where can I find the facilities ?",
+      "Are there on-campus dining facilities ?"
     ],
     "responses": ["The university campus offers a variety of facilities to support student life and learning, including libraries, laboratories, recreational centers, dining halls, student lounges, and more. The main library is located at [insert library location]. On-campus dining options include cafeterias, food courts, coffee shops, and specialty restaurants. You can explore campus facilities further by visiting the university's website or taking a campus tour."
  ]

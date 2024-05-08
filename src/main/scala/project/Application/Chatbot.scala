@@ -4,16 +4,14 @@ import project.Application.classification.NaiveBayesClassifier
 import project.Application.feature_extraction.TFIDF
 import project.Application.preprocessing.InputParsing
 import project.data_storage.DataManager
+import project.Application.session_management.{Message, UserSession, UserSessionManager}
 
 import scala.util.Random
 
-private case class SessionState(attributes: Map[String, String])
+class Chatbot (clientId: String, sessionId:String){
+  private val dataManager = DataManager()
 
-class Chatbot (company: String){
-  private val dataManager = DataManager(company)
-  private var currentSessionState = SessionState(Map.empty)
-
-  private val dataset = dataManager.getData()
+  private val dataset = dataManager.getData(clientId)
   private val tokenizedDataSet = InputParsing.tokenizeDataset(
     dataset.map((category,patternResponse) => (category, patternResponse.patterns)))
 
@@ -26,24 +24,17 @@ class Chatbot (company: String){
   private val apiPlaceholderPattern = "\\[api_request:(.*?)\\]".r
   private val placeholderPattern = "\\{(.*?)\\}".r
 
+  private def getSession: UserSession = UserSessionManager.getSession(sessionId, clientId)
 
   // Update session state with provided attribute values
-  private def updateSessionState(attributeName: String, attributeValue: String): Unit = {
-    currentSessionState = currentSessionState.copy(attributes = currentSessionState.attributes + (attributeName -> attributeValue))
-  }
+  private def updateSessionStateAttribute(attributeName: String, attributeValue: String): Unit =
+    UserSessionManager.addOrUpdateSession(
+      getSession.copy(attributes = getSession.attributes + (attributeName -> attributeValue))
+    )
 
   // Retrieve attribute values from session state
   private def getAttributeValue(attributeName: String): Option[String] = {
-    currentSessionState.attributes.get(attributeName)
-  }
-
-  private def askForAttribute(attribute: String) : String = {
-    println(s"Please provide your $attribute:")
-    val attributeValue = scala.io.StdIn.readLine()
-    // Update session state with provided attribute value
-    updateSessionState(attribute, attributeValue)
-
-    attributeValue
+    getSession.attributes.get(attributeName)
   }
 
   private def handleAttributePlaceholders(response: String): String = {
@@ -53,21 +44,26 @@ class Chatbot (company: String){
 
     placeholders.foreach { placeholder =>
       val attributeName = placeholder.stripPrefix("{").stripSuffix("}")
-      if (!currentSessionState.attributes.contains(attributeName)) {
+      if (!getSession.attributes.contains(attributeName)) {
         // Prompt user for missing attribute
-        askForAttribute(attributeName);
+        UserSessionManager.addOrUpdateSession(
+            getSession.copy(
+              incompleteResponse = Some(response),
+              promptedAttribute = Some(attributeName)))
       }
     }
 
-    // Response generation
-    // Replace placeholders with attribute values
-    var result = response
-    currentSessionState.attributes.foreach { case (attributeName, attributeValue) =>
-
-      result = result.replace(s"{$attributeName}", attributeValue)
+    getSession.promptedAttribute match {
+      case Some(attributeName) =>  s"What is your $attributeName ?"
+      case None =>
+        // Response generation
+        // Replace placeholders with attribute values
+        var result = response
+        getSession.attributes.foreach { case (attributeName, attributeValue) =>
+          result = result.replace(s"{$attributeName}", attributeValue)
+        }
+        result
     }
-
-    result
   }
 
   private def handleAPIRequests(response: String) : String = {
@@ -83,22 +79,37 @@ class Chatbot (company: String){
 
     result
   }
+  private def processResponse(response:String) : String = {
+    handleAPIRequests(handleAttributePlaceholders(response))
+  }
 
-  // Generate response based on user input
-  def generateResponse(question: String): String = {
+  def handleUserInput(input:String) : String = {
+    getSession.promptedAttribute match {
+      case Some(promptedAttribute) => {
+        updateSessionStateAttribute(promptedAttribute, input)
+        UserSessionManager.addOrUpdateSession(getSession.copy(promptedAttribute = None))
+        processResponse(getSession.incompleteResponse.get)
+      }
+      case None => generateResponse(input)
+    }
+  }
+
+  private def addMessage(text:String, isUser:Boolean):Unit = {
+    UserSessionManager.addOrUpdateSession(getSession.copy(messages = getSession.messages :+ Message(text,isUser)))
+  }
+
+  // Generate response based on user question and
+  private def generateResponse(question: String): String = {
 
     val preprocessedQuestion = InputParsing.parseQuestion(question)
+    println("preprocessedQuestion " + preprocessedQuestion )
     val tfidfVector = featureExtractor.calculateTFIDFVector(preprocessedQuestion)
     val category = classifier.predict(tfidfVector)
     val response = dataset(category).responses(random.nextInt(dataset(category).responses.length))
 
     // Replace attribute placeholders with their values
-    var finalResponse = handleAttributePlaceholders(response)
-
-    // Perform necessary API calls and place update response
-    finalResponse = handleAPIRequests(finalResponse)
-
-    finalResponse
+    // and perform necessary API calls and place update response
+    processResponse(response)
   }
 
 }

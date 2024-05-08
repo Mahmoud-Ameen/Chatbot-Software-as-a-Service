@@ -13,14 +13,18 @@ implicit val formats: DefaultFormats.type = DefaultFormats
 
 case class PatternResponse(patterns: Vector[String], responses: Vector[String])
 
-class DataManager(company:String) {
+class DataManager() {
 
-	// TODO: fix file path
-	private val filePath = "Temporarily please replace this string with the files path"+company+".json"
 
-	def getData(): mutable.Map[String, PatternResponse] = {
+	def getData(clientId:String): mutable.Map[String, PatternResponse] = {
+		// TODO: fix file path
+		val filePath = "please enter file path"+clientId+".json"
 		val json = readAllJson(filePath)
 		json.extract[mutable.Map[String, PatternResponse]]
+	}
+
+	def getClientIds():List[String] = {
+		List("university","restaurant")
 	}
 
 	private def readAllJson(filename: String): JValue = {

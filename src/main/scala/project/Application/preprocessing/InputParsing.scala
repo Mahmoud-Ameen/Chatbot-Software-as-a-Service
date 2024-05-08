@@ -11,8 +11,7 @@ object InputParsing {
 
   private def preprocessing(input: String): String = {
     var str = input.toLowerCase()
-
-    val nonUsefulWords = Set(
+    val nonUsefulWords = Set( "what", "do", "you", "me", "your", "about",
       "to", "I", "the", "you", "and", "or", "in", "of", "for", "on", "at", "with",
       "is", "are", "am", "was", "were", "be", "been", "being", "this", "that",
       "these", "those", "it", "he", "she", "they", "we", "us", "them", "my", "your",
@@ -54,7 +53,7 @@ object InputParsing {
       "not until", "not while", "not whereas", "not whether", "not while", "not also",
       "not even", "not just", "not only", "not already", "not even", "not yet", "not still",
       "not so", "not then", "not thus", "not hence", "not accordingly")
-    nonUsefulWords.foreach(word => str.replace(str,""))
+
 
     str = str.replace("won't", "will not")
     str = str.replace("can't", "can not")
@@ -74,7 +73,10 @@ object InputParsing {
     str = str.replace("[^a-zA-Z0-9]", " ")
     str = str.replace("\\W+", " ") // W+ means one or more non-word characters, so it will split the string by one or more non-word characters.
     // Handling contractions and special cases appropriately (e.g., "don't" -> "do not").
-    str
+
+    var vec = str.split(' ')
+    vec = vec.filter(w => !nonUsefulWords.contains(w))
+    vec.mkString("", " ","")
   }
 
   // function to make tokens from the input, it take the string returned by preprocessing function
@@ -89,13 +91,14 @@ object InputParsing {
   def parseQuestion(input: String): Vector[String] = {
     val preprocessedInput = preprocessing(input)
     val tokens = tokenization(preprocessedInput)
-    //val posTaggedTokens = posTagOpenNLP(tokens)
+//    val posTaggedTokens = posTagOpenNLP(tokens)
 
     // return the tokens vector but with the first element in the inner vector only and without their POS tags
     tokens.flatten.map {
       case Vector(token: String, _, _) => token
     }
-    //posTaggedTokens
+//    posTaggedTokens
+    preprocessedInput.split(' ').toVector
   }
 
 }

@@ -31,7 +31,7 @@ class NaiveBayesClassifier {
 
     // Calculate class priors
     val numDocuments = tfidf.keys.size
-    classPriors = classCounts.map((key,value) => (key,value.toDouble / numDocuments))
+    classPriors = classCounts.map((key,value) => (key,0.5))
 
     // Calculate conditional probabilities
     conditionalProbs = termCounts.map { (id,termCount) =>
@@ -43,10 +43,11 @@ class NaiveBayesClassifier {
 
   // Method to predict the class of a new document
   def predict(tfidfVector: mutable.Map[String, Double]): String = {
+    println("trying to predict: " + tfidfVector)
     val classScores = mutable.Map[String, Double]().withDefaultValue(0.0)
     // Calculate scores for each class
     classPriors.keys.foreach ( label => {
-      var score = math.log(classPriors(label))
+      var score = math.log(classPriors(label)+2)
       tfidfVector.keys.foreach( term =>
         if (conditionalProbs(label).contains(term)) {
           // adding 2 is called laplace smoothing
@@ -56,6 +57,7 @@ class NaiveBayesClassifier {
       classScores(label) = score
     })
 
+    println("ClassScores:" + classScores)
     // Return the class with the highest score
     classScores.maxBy(_._2)._1
   }
